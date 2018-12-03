@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "330915650606",
+    "firebase_url": "https://bold-quanta-220218.firebaseio.com",
+    "project_id": "bold-quanta-220218",
+    "storage_bucket": "bold-quanta-220218.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330915650606:android:ed01a246c6f3f630",
+        "android_client_info": {
+          "package_name": "com.codex.easytourmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330915650606-on1jrl2ms2n136dkpbbv2ne2pktjujkv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codex.easytourmanager",
+            "certificate_hash": "64ff46a41da072b5801750818fb46306515334a1"
+          }
+        },
+        {
+          "client_id": "330915650606-109453rvbr93io71jv5mbu1jed3guqg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZoq5sa5UhtKgFj7iaFoAl0xYh1IHK3Qw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330915650606-109453rvbr93io71jv5mbu1jed3guqg0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

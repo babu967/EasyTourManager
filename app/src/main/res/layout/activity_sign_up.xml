@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backpic"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Create a new Account"
+            android:textColor="@color/text_color"
+            android:textSize="30sp" />
+
+
+        <!--  <ImageView
+              android:id="@+id/propic_view"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center"
+              android:layout_marginTop="10dp"
+              android:onClick="chooseImage"
+              android:src="@drawable/profile" />-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/propic_view"
+            android:layout_gravity="center"
+            android:layout_below="@+id/heading"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/profile"
+            android:onClick="chooseImage"
+            />
+
+
+
+        <!--<TextView
+            android:id="@+id/select_pro_pic"
+            android:layout_below="@+id/propic_view"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:text="select your rofile pic" />-->
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/propic_view"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:hint="Enter Name"
+            android:id="@+id/name_edit"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/name_edit"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:hint="Enter Email "
+            android:id="@+id/email_edit"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:hint="Enter Password"
+            android:id="@+id/password_edit"
+            android:padding="10dp"
+            android:inputType="numberPassword"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/password_edit"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:hint="Emergency Contact"
+            android:id="@+id/contact_edit"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/contact_edit"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:hint="Address"
+            android:id="@+id/address_edit"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="16dp"
+            android:id="@+id/submit"
+            android:layout_above="@+id/sign_up_login"
+            android:layout_marginTop="55dp"
+            android:onClick="signUpUser"
+            />
+
+        <!--    <TextView
+                android:id="@+id/sign_up_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="goToLogIn"
+                android:text="Sign In"
+                android:textColor="#01579B"
+                android:textSize="16sp"
+
+                tools:ignore="OnClick" />-->
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="15dp"
+            android:text="Already have a account"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="18dp"
+            android:id="@+id/sign_up_login"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="55dp"
+            android:paddingTop="10dp"
+            android:onClick="goToLogIn"
+            tools:ignore= "OnClick" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
