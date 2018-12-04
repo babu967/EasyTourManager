@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddEventActivity">
+    tools:context=".AddEventActivity"
+    android:background="@drawable/gradient_blue"
+
+    >
 
 
 

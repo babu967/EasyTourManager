@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.codex.easytourmanager.adapters.EventRecyclerViewAdapter;
 import com.codex.easytourmanager.event_class.EventInfo;
 import com.codex.easytourmanager.event_class.SharedEvent;
-import com.codex.easytourmanager.forecast_data.List;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -24,7 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -127,8 +125,8 @@ public class SharedEventActivity extends AppCompatActivity {
                             sharedEvent = new SharedEvent(eventInfo.getFromDate(),eventInfo.getToDate(),eventInfo.getEventBudget(),eventInfo.getEventDestination(),eventInfo.getEventKey(),sharedUserKey);
 
                         }
-                        Toast.makeText(SharedEventActivity.this, eventInfo.getEventDestination(), Toast.LENGTH_SHORT).show();
-                        Toast.makeText(SharedEventActivity.this, sharedEvent.getUserKey(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(SharedEventActivity.this, eventInfo.getEventDestination(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(SharedEventActivity.this, sharedEvent.getUserKey(), Toast.LENGTH_SHORT).show();
 
                         String key = sharedReference.push().getKey();
                         sharedReference.child(sharedEvent.getEventKey()).setValue(sharedEvent);
