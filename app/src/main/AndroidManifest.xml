@@ -57,8 +57,6 @@
         <activity android:name=".AddMomentActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".ViewDirectionsActivity" />
-        <activity android:name=".ViewPlaceActivity" />
         <activity android:name=".PlaceDetailsActivity" />
         <activity android:name=".ShareEventActivity" />
         <activity android:name=".SharedEventActivity" />
