@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,6 +24,7 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         imageView=findViewById(R.id.splashIV);
         textView=findViewById(R.id.splashTV);
+        textView.setVisibility(View.GONE);
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.myanim);
         imageView.startAnimation(animation);
         new Handler().postDelayed(new Runnable() {
@@ -32,6 +34,6 @@ public class SplashActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },3000);
     }
 }

@@ -1,5 +1,6 @@
 package com.codex.easytourmanager;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -137,13 +139,35 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else if (!drawer.isDrawerOpen(GravityCompat.START)) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Confirm exit")
+                    .setMessage("Are you want to exit?")
+                    .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                           android.os.Process.killProcess(android.os.Process.myPid());
+                            System.exit(1);
 
-            if (time + INTERVAL > System.currentTimeMillis()) {
+
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
+
+           /* if (time + INTERVAL > System.currentTimeMillis()) {
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
             }
             Toast.makeText(this, "Press again to exit app", Toast.LENGTH_SHORT).show();
-            time = System.currentTimeMillis();
+            time = System.currentTimeMillis();*/
         }
 
 
